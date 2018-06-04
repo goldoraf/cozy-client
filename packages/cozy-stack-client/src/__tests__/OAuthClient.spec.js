@@ -43,8 +43,8 @@ describe('OAuthClient', () => {
 
     it('should throw on other server interactions', () => {
       expect(client.unregister()).rejects.toThrowErrorMatchingSnapshot()
-      expect(client.fetchInformations()).rejects.toThrowErrorMatchingSnapshot()
-      expect(client.updateInformations()).rejects.toThrowErrorMatchingSnapshot()
+      expect(client.fetchInformation()).rejects.toThrowErrorMatchingSnapshot()
+      expect(client.updateInformation()).rejects.toThrowErrorMatchingSnapshot()
       expect(client.fetchAccessToken()).rejects.toThrowErrorMatchingSnapshot()
       expect(client.refreshToken()).rejects.toThrowErrorMatchingSnapshot()
     })
@@ -77,12 +77,12 @@ describe('OAuthClient', () => {
     })
 
     it('should fetch client informations', () => {
-      client.fetchInformations()
+      client.fetchInformation()
       expect(fetch.mock.calls[0]).toMatchSnapshot()
     })
 
     it('should update client informations', () => {
-      client.updateInformations({
+      client.updateInformation({
         policy_url: 'http://example.com'
       })
       expect(fetch.mock.calls[0]).toMatchSnapshot()
