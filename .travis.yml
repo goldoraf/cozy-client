@@ -8,5 +8,6 @@ cache:
   directories:
   - node_modules
 script:
+- lerna bootstrap
 - yarn lint
 - yarn test
