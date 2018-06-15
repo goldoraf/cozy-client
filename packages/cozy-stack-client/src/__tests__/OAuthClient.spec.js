@@ -27,6 +27,7 @@ describe('OAuthClient', () => {
 
   beforeEach(() => {
     fetch.resetMocks()
+    fetch.mockResponse(JSON.stringify({ foo: 'bar' }))
   })
 
   let client
