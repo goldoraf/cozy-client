@@ -31,7 +31,6 @@
 		"packages/*"
 	],
 	"scripts": {
-		"postinstall": "lerna bootstrap",
 		"lint": "eslint 'packages/*/src/**/*.js'",
 		"test": "jest",
 		"watch": "npm-run-all --parallel watch:cozy-client watch:cozy-stack-client watch:cozy-pouch-link",
